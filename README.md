@@ -14,10 +14,9 @@ pub struct Vars {
 /// It ensures at first use that all required environment variables are set and valid.
 superenvy::vars! {
     pub static ref VARS: Vars = Vars {
-        jwt_secret: var("JWT_SECRET").non_empty().inner,
-        manual_cli_mode: var_opt("MANUAL_CLI_MODE")
-            .map(|v| v.bool()).unwrap_or(false),
-        database_url: var("DATABASE_URL").non_empty().inner,
+        jwt_secret: superenvy::var("JWT_SECRET").non_empty().inner,
+        manual_cli_mode: superenvy::var_opt("MANUAL_CLI_MODE").map(|v| v.bool()).unwrap_or(false),
+        database_url: superenvy::var("DATABASE_URL").non_empty().inner,
     };
 }
 

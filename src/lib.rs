@@ -2,8 +2,8 @@ pub use lazy_static::lazy_static as vars;
 use std::env;
 
 pub struct Var<'v> {
-    inner: String,
-    name: &'v str,
+    pub inner: String,
+    pub name: &'v str,
 }
 
 impl<'v> Var<'v> {
