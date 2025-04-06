@@ -1,0 +1,14 @@
+[package]
+name = "superenvy"
+authors = ["Pascal d'Achard <pasdachard@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "A tiny wrapper around dotenvy and lazy_static, providing static environment variables that are checked at runtime."
+homepage = "https://github.com/eatenpancreas/superenvy"
+repository = "https://github.com/eatenpancreas/superenvy"
+keywords = ["env"]
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dotenvy = "0.15.7"
+lazy_static = "1.5.0"
